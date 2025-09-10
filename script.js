@@ -1,20 +1,17 @@
 class Person {
   constructor(name, age) {
-    this._name = name; // use underscore to indicate private-like property
+    this._name = name; 
     this._age = age;
   }
 
-  // Getter for name
   get name() {
     return this._name;
   }
 
-  // Getter for age
   get age() {
     return this._age;
   }
 
-  // Setter for age
   set age(age) {
     this._age = age;
   }
