@@ -1,36 +1,57 @@
+// Base class Person
 class Person {
   constructor(name, age) {
-    this.name = name; 
-    this.age = age;
+    this._name = name; // private-like convention
+    this._age = age;
   }
 
+  // Getter for name
   get name() {
-    return this.name;
+    return this._name;
   }
 
+  // Getter for age
   get age() {
-    return this.age;
+    return this._age;
   }
 
-  set age(age) {
-    this.age = age;
+  // Setter for age
+  set age(newAge) {
+    this._age = newAge;
   }
 }
 
+// Student class inheriting from Person
 class Student extends Person {
   study() {
     console.log(`${this.name} is studying`);
   }
 }
 
+// Teacher class inheriting from Person
 class Teacher extends Person {
   teach() {
     console.log(`${this.name} is teaching`);
   }
 }
 
-const person = new Person("John" , 25)
-console.log(person.name)
+// ----------- Example Usage -----------
+
+// Creating a Person instance
+const person = new Person("John", 25);
+console.log(person.name);  // Output: John
+
+person.age = 30;  // Using the setter to change the age
+console.log(person.age);  // Output: 30
+
+// Creating a Student instance
+const student = new Student("Alice", 22);
+student.study();  // Output: Alice is studying
+
+// Creating a Teacher instance
+const teacher = new Teacher("Bob", 40);
+teacher.teach();  // Output: Bob is teaching
+
 
 
 // Do not change the code below this line
