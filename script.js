@@ -29,6 +29,9 @@ class Teacher extends Person {
   }
 }
 
+const person = new Person("John" , 25)
+console.log(person.name)
+
 
 // Do not change the code below this line
 window.Person = Person;
